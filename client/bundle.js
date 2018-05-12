@@ -62,7 +62,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "11613f53d196d04da263"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "70a79f56835d302c436d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -28886,7 +28886,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".videos form button {\n  margin-left: -2px; }\n\nheader .navbar-nav .active {\n  color: #060; }\n", ""]);
+exports.push([module.i, ".videos form button {\n  margin-left: -2px; }\n\nheader .navbar-nav .active {\n  color: #060; }\n\n.dropdown .dropdown-menu {\n  top: 20px; }\n\n#user-profile .nav .active {\n  color: #333;\n  font-weight: bold; }\n", ""]);
 
 // exports
 
@@ -58612,6 +58612,12 @@ var _Row2 = _interopRequireDefault(_Row);
 
 var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
+var _UserProfileDropdown = __webpack_require__(/*! ./UserProfileDropdown */ "./src/client/Components/UserProfileDropdown.js");
+
+var _UserProfileDropdown2 = _interopRequireDefault(_UserProfileDropdown);
+
+var _auth = __webpack_require__(/*! ../Actions/auth */ "./src/client/Actions/auth.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -58639,23 +58645,7 @@ class AuthNav extends _react2.default.Component {
               'Call Us: +99 888-888-8888'
             )
           ),
-          isAuthenticated ? _react2.default.createElement(
-            'div',
-            { className: 'float-right' },
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/dashboard', className: 'btn btn-info mr-2 py-1' },
-              'Dashboard'
-            ),
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '#', className: 'btn btn-danger py-1', onClick: () => {
-                  localStorage.clear();
-                  LogoutUser();
-                } },
-              'Logout'
-            )
-          ) : _react2.default.createElement(
+          isAuthenticated ? _react2.default.createElement(_UserProfileDropdown2.default, null) : _react2.default.createElement(
             'div',
             { className: 'float-right' },
             _react2.default.createElement(
@@ -58679,7 +58669,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  LogoutUser: () => dispatch(LogoutUser())
+  LogoutUser: () => dispatch((0, _auth.LogoutUser)())
 });
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AuthNav);
 
@@ -59518,15 +59508,15 @@ const DashboardSidebar = () => _react2.default.createElement(
   { className: 'col-md-3' },
   _react2.default.createElement(
     'div',
-    { 'class': 'card' },
+    { className: 'card mb-3' },
     _react2.default.createElement(
       'div',
-      { 'class': 'card-header text-center' },
-      'User Name'
+      { className: 'card-header text-center' },
+      'My Download'
     ),
     _react2.default.createElement(
       'div',
-      { 'class': 'card-body' },
+      { className: 'card-body' },
       _react2.default.createElement(
         'ul',
         { className: 'nav flex-column' },
@@ -59535,9 +59525,9 @@ const DashboardSidebar = () => _react2.default.createElement(
           { className: 'nav-item' },
           _react2.default.createElement(
             _reactRouterDom.NavLink,
-            { activeClassName: 'active', to: '/mycontent', className: 'nav-link text-info' },
-            _react2.default.createElement('i', { className: 'fa fa-user' }),
-            ' My Contents'
+            { activeClassName: 'active', to: '/myaccount/downloads/images', className: 'nav-link text-info' },
+            _react2.default.createElement('i', { className: 'fa fa-images' }),
+            ' Images'
           )
         ),
         _react2.default.createElement(
@@ -59545,9 +59535,9 @@ const DashboardSidebar = () => _react2.default.createElement(
           { className: 'nav-item' },
           _react2.default.createElement(
             _reactRouterDom.NavLink,
-            { activeClassName: 'active', to: '/mycontent/create', className: 'nav-link text-info' },
-            _react2.default.createElement('i', { className: 'fa fa-file' }),
-            ' My Blog'
+            { activeClassName: 'active', to: '/myaccount/downloads/videos', className: 'nav-link text-info' },
+            _react2.default.createElement('i', { className: 'fa fa-video' }),
+            ' Videos'
           )
         ),
         _react2.default.createElement(
@@ -59555,9 +59545,36 @@ const DashboardSidebar = () => _react2.default.createElement(
           { className: 'nav-item' },
           _react2.default.createElement(
             _reactRouterDom.NavLink,
-            { activeClassName: 'active', to: '/mycontent/post', className: 'nav-link text-info' },
-            _react2.default.createElement('i', { className: 'fa fa-edit' }),
-            ' Post a Content'
+            { activeClassName: 'active', to: '/myaccount/downloads/memes', className: 'nav-link text-info' },
+            _react2.default.createElement('i', { className: 'fa fa-leaf' }),
+            ' Memes'
+          )
+        )
+      )
+    )
+  ),
+  _react2.default.createElement(
+    'div',
+    { className: 'card mb-3' },
+    _react2.default.createElement(
+      'div',
+      { className: 'card-header text-center' },
+      'My Order'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'card-body' },
+      _react2.default.createElement(
+        'ul',
+        { className: 'nav flex-column' },
+        _react2.default.createElement(
+          'li',
+          { className: 'nav-item' },
+          _react2.default.createElement(
+            _reactRouterDom.NavLink,
+            { activeClassName: 'active', to: '/myaccount/orders/images', className: 'nav-link text-info' },
+            _react2.default.createElement('i', { className: 'fa fa-images' }),
+            ' Images'
           )
         ),
         _react2.default.createElement(
@@ -59565,9 +59582,19 @@ const DashboardSidebar = () => _react2.default.createElement(
           { className: 'nav-item' },
           _react2.default.createElement(
             _reactRouterDom.NavLink,
-            { activeClassName: 'active', to: '/mycontent/settings', className: 'nav-link text-info' },
-            _react2.default.createElement('i', { className: 'fa fa-gear' }),
-            ' Account Setting'
+            { activeClassName: 'active', to: '/myaccount/orders/videos', className: 'nav-link text-info' },
+            _react2.default.createElement('i', { className: 'fa fa-video' }),
+            ' Videos'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          { className: 'nav-item' },
+          _react2.default.createElement(
+            _reactRouterDom.NavLink,
+            { activeClassName: 'active', to: '/myaccount/orders/memes', className: 'nav-link text-info' },
+            _react2.default.createElement('i', { className: 'fa fa-leaf' }),
+            ' Memes'
           )
         )
       )
@@ -59579,9 +59606,9 @@ exports.default = DashboardSidebar;
 
 /***/ }),
 
-/***/ "./src/client/Components/Dashboard/MyContent.js":
+/***/ "./src/client/Components/Dashboard/MyAccount.js":
 /*!******************************************************!*\
-  !*** ./src/client/Components/Dashboard/MyContent.js ***!
+  !*** ./src/client/Components/Dashboard/MyAccount.js ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -59597,94 +59624,222 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+var _Row = __webpack_require__(/*! ../Row */ "./src/client/Components/Row.js");
 
-var _axios2 = _interopRequireDefault(_axios);
-
-var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-
-var _content = __webpack_require__(/*! ../../Actions/content */ "./src/client/Actions/content.js");
-
-var _Grid = __webpack_require__(/*! ../Grids/Grid */ "./src/client/Components/Grids/Grid.js");
-
-var _Grid2 = _interopRequireDefault(_Grid);
-
-var _config = __webpack_require__(/*! ../../config */ "./src/client/config.js");
-
-var _config2 = _interopRequireDefault(_config);
+var _Row2 = _interopRequireDefault(_Row);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-class MyContent extends _react2.default.Component {
-  constructor(...args) {
-    var _temp;
-
-    return _temp = super(...args), this.state = {
-      content: false
-    }, this.deleteItem = id => {
-      _axios2.default.delete(`${_config2.default.server}/api/content/${id}`, {
-        headers: {
-          'authorization': localStorage.getItem('auth')
-        }
-      }).then(res => {
-        this.props.deleteItem(id);
-        console.log(res.data);
-      }).catch(e => {
-        console.log(e);
-      });
-    }, _temp;
-  }
-
-  componentDidMount() {
-    (0, _axios2.default)({
-      method: 'get',
-      url: `${_config2.default.server}/api/content/my`,
-      headers: {
-        'authorization': localStorage.getItem('auth')
-      }
-    }).then(res => {
-      // console.log(res.data)
-      this.props.myContent(res.data);
-      this.setState({
-        content: true
-      });
-    }).catch(e => {
-      console.log(e);
-    });
-  }
-
+class MyAccount extends _react2.default.Component {
   render() {
     return _react2.default.createElement(
       'div',
       { className: 'col-md-9' },
       _react2.default.createElement(
-        'div',
-        { className: 'left-content' },
-        this.state.content ? _react2.default.createElement(
-          'div',
-          { className: 'box' },
-          _react2.default.createElement(
-            'div',
-            { className: 'grids' },
-            this.props.contents.map((content, key) => {
-              return _react2.default.createElement(_Grid2.default, { deleteItem: this.deleteItem, isUser: true, content: content, key: content._id });
-            })
-          )
-        ) : 'Loading...'
+        'h1',
+        null,
+        'Hellow World'
       )
     );
   }
 }
-const mapStateToProps = state => ({
-  contents: state.content.mycontent
+
+exports.default = MyAccount;
+
+/***/ }),
+
+/***/ "./src/client/Components/Dashboard/MyImage.Card.js":
+/*!*********************************************************!*\
+  !*** ./src/client/Components/Dashboard/MyImage.Card.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-const mapDispatchToProps = dispatch => ({
-  myContent: data => dispatch((0, _content.myContent)(data)),
-  deleteItem: id => dispatch((0, _content.deleteContent)(id))
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Row = __webpack_require__(/*! ../Row */ "./src/client/Components/Row.js");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class MyImageCard extends _react2.default.Component {
+  render() {
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-4 mb-3' },
+      _react2.default.createElement(
+        'div',
+        { className: 'card' },
+        _react2.default.createElement(
+          'div',
+          { className: 'card-body p-0' },
+          _react2.default.createElement('img', { src: '/images/g5.jpg', className: 'img-fluid' })
+        )
+      )
+    );
+  }
+}
+
+exports.default = MyImageCard;
+
+/***/ }),
+
+/***/ "./src/client/Components/Dashboard/MyImages.js":
+/*!*****************************************************!*\
+  !*** ./src/client/Components/Dashboard/MyImages.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MyContent);
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Row = __webpack_require__(/*! ../Row */ "./src/client/Components/Row.js");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _MyImage = __webpack_require__(/*! ./MyImage.Card */ "./src/client/Components/Dashboard/MyImage.Card.js");
+
+var _MyImage2 = _interopRequireDefault(_MyImage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class MyImages extends _react2.default.Component {
+  render() {
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-9' },
+      _react2.default.createElement(
+        _Row2.default,
+        null,
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null)
+      )
+    );
+  }
+}
+
+exports.default = MyImages;
+
+/***/ }),
+
+/***/ "./src/client/Components/Dashboard/MyMemes.js":
+/*!****************************************************!*\
+  !*** ./src/client/Components/Dashboard/MyMemes.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Row = __webpack_require__(/*! ../Row */ "./src/client/Components/Row.js");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _MyImage = __webpack_require__(/*! ./MyImage.Card */ "./src/client/Components/Dashboard/MyImage.Card.js");
+
+var _MyImage2 = _interopRequireDefault(_MyImage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class MyMemes extends _react2.default.Component {
+  render() {
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-9' },
+      _react2.default.createElement(
+        _Row2.default,
+        null,
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null),
+        _react2.default.createElement(_MyImage2.default, null)
+      )
+    );
+  }
+}
+
+exports.default = MyMemes;
+
+/***/ }),
+
+/***/ "./src/client/Components/Dashboard/MyVideos.js":
+/*!*****************************************************!*\
+  !*** ./src/client/Components/Dashboard/MyVideos.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Row = __webpack_require__(/*! ../Row */ "./src/client/Components/Row.js");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _MyImage = __webpack_require__(/*! ./MyImage.Card */ "./src/client/Components/Dashboard/MyImage.Card.js");
+
+var _MyImage2 = _interopRequireDefault(_MyImage);
+
+var _Loader = __webpack_require__(/*! ../Loader */ "./src/client/Components/Loader.js");
+
+var _Loader2 = _interopRequireDefault(_Loader);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class MyVideos extends _react2.default.Component {
+  render() {
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-9' },
+      _react2.default.createElement(_Row2.default, null),
+      _react2.default.createElement(_Loader2.default, null)
+    );
+  }
+}
+
+exports.default = MyVideos;
 
 /***/ }),
 
@@ -60684,6 +60839,36 @@ exports.default = ImageNav;
 
 /***/ }),
 
+/***/ "./src/client/Components/Loader.js":
+/*!*****************************************!*\
+  !*** ./src/client/Components/Loader.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Loader = () => _react2.default.createElement(
+  "div",
+  { className: "text-center mt-5 pt-5" },
+  _react2.default.createElement("i", { className: "fas fa-4x fa-spinner fa-spin" })
+);
+
+exports.default = Loader;
+
+/***/ }),
+
 /***/ "./src/client/Components/NavBar.js":
 /*!*****************************************!*\
   !*** ./src/client/Components/NavBar.js ***!
@@ -61062,6 +61247,153 @@ const Sidebar = () => _react2.default.createElement(
 );
 
 exports.default = Sidebar;
+
+/***/ }),
+
+/***/ "./src/client/Components/UserProfileDropdown.js":
+/*!******************************************************!*\
+  !*** ./src/client/Components/UserProfileDropdown.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _config = __webpack_require__(/*! ../config */ "./src/client/config.js");
+
+var _config2 = _interopRequireDefault(_config);
+
+var _auth = __webpack_require__(/*! ../Actions/auth */ "./src/client/Actions/auth.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+// import { LogoutUser, setUser } from '../../Actions/auth';
+
+
+class UserProfileDropdown extends _react2.default.Component {
+  constructor(...args) {
+    var _temp;
+
+    return _temp = super(...args), this.state = {
+      data: false
+    }, _temp;
+  }
+
+  componentDidMount() {
+    _axios2.default.get(`${_config2.default.server}/api/user/me`, {
+      headers: {
+        'authorization': localStorage.getItem('auth')
+      }
+    }).then(res => {
+      // this.props.userData(res.data)
+      this.setState({
+        data: res.data
+      });
+    }).catch(e => {
+      localStorage.clear();
+      // this.props.LogoutUser();
+      console.log(e);
+    });
+  }
+
+  render() {
+    const _props = this.props,
+          { token, LogoutUser, userData } = _props,
+          props = _objectWithoutProperties(_props, ['token', 'LogoutUser', 'userData']);
+    const data = this.state.data;
+    return _react2.default.createElement(
+      'div',
+      { className: 'float-right' },
+      data ? _react2.default.createElement(
+        'div',
+        { className: 'dropdown p-2' },
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '#', 'data-toggle': 'dropdown' },
+          'Hi, ',
+          data.user.firstname,
+          ' ',
+          data.user.lastname,
+          _react2.default.createElement(
+            'span',
+            null,
+            _react2.default.createElement('i', { className: 'fa fa-arrow-down' })
+          )
+        ),
+        _react2.default.createElement(
+          'ul',
+          { className: 'dropdown-menu  dropdown-menu-right p-0 mt-10', style: { top: 20 } },
+          _react2.default.createElement(
+            'li',
+            { className: 'nav-item' },
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { activeClassName: 'active', to: '/myaccount', className: 'nav-link text-info' },
+              _react2.default.createElement('i', { className: 'fa fa-user' }),
+              ' My Account'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            { className: 'nav-item' },
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { activeClassName: 'active', to: '/myaccount/settings', className: 'nav-link text-info' },
+              _react2.default.createElement('i', { className: 'fa fa-key' }),
+              ' Account Setting'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            { className: 'nav-item' },
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { onClick: () => {
+                  localStorage.clear();
+                  LogoutUser();
+                }, activeClassName: 'active', to: '#', className: 'nav-link text-info' },
+              _react2.default.createElement('i', { className: 'fa fa-sign-out' }),
+              ' Logout'
+            )
+          )
+        )
+      ) : _react2.default.createElement(
+        'span',
+        { className: 'text-light p-2' },
+        '\'Please Wait...\''
+      )
+    );
+  }
+}
+const mapStateToProps = state => ({
+  token: state.auth.token,
+  user: state.auth.user
+});
+
+const mapDispatchToProps = dispatch => ({
+  LogoutUser: () => dispatch((0, _auth.LogoutUser)()),
+  userData: data => dispatch(setUser(data))
+});
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(UserProfileDropdown);
 
 /***/ }),
 
@@ -61558,17 +61890,21 @@ const PrivateRoute = (_ref) => {
         rest = _objectWithoutProperties(_ref, ['isAuthenticated', 'component']);
 
     return isAuthenticated ? _react2.default.createElement(_reactRouterDom.Route, _extends({}, rest, { component: props => _react2.default.createElement(
-            _Container2.default,
-            null,
+            'section',
+            { id: 'user-profile' },
             _react2.default.createElement(
-                _Row2.default,
+                _Container2.default,
                 null,
-                _react2.default.createElement(_DashboardSidebar2.default, null),
-                _react2.default.createElement(Component, props),
                 _react2.default.createElement(
-                    'div',
-                    { className: 'clear' },
-                    ' '
+                    _Row2.default,
+                    { className: 'my-5' },
+                    _react2.default.createElement(_DashboardSidebar2.default, null),
+                    _react2.default.createElement(Component, props),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'clear' },
+                        ' '
+                    )
                 )
             )
         ) })) : _react2.default.createElement(_reactRouterDom.Redirect, { to: '/login' });
@@ -61714,9 +62050,9 @@ var _AddNewContent = __webpack_require__(/*! ../Components/Dashboard/AddNewConte
 
 var _AddNewContent2 = _interopRequireDefault(_AddNewContent);
 
-var _MyContent = __webpack_require__(/*! ../Components/Dashboard/MyContent */ "./src/client/Components/Dashboard/MyContent.js");
+var _MyAccount = __webpack_require__(/*! ../Components/Dashboard/MyAccount */ "./src/client/Components/Dashboard/MyAccount.js");
 
-var _MyContent2 = _interopRequireDefault(_MyContent);
+var _MyAccount2 = _interopRequireDefault(_MyAccount);
 
 var _Videos = __webpack_require__(/*! ../Views/Videos */ "./src/client/Views/Videos.js");
 
@@ -61726,10 +62062,23 @@ var _Images = __webpack_require__(/*! ../Views/Images */ "./src/client/Views/Ima
 
 var _Images2 = _interopRequireDefault(_Images);
 
+var _MyImages = __webpack_require__(/*! ../Components/Dashboard/MyImages */ "./src/client/Components/Dashboard/MyImages.js");
+
+var _MyImages2 = _interopRequireDefault(_MyImages);
+
+var _MyVideos = __webpack_require__(/*! ../Components/Dashboard/MyVideos */ "./src/client/Components/Dashboard/MyVideos.js");
+
+var _MyVideos2 = _interopRequireDefault(_MyVideos);
+
+var _MyMemes = __webpack_require__(/*! ../Components/Dashboard/MyMemes */ "./src/client/Components/Dashboard/MyMemes.js");
+
+var _MyMemes2 = _interopRequireDefault(_MyMemes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import indexRouter from './router'
 const history = exports.history = (0, _createBrowserHistory2.default)();
+// import indexRouter from './router'
+
 
 const AppRouter = () => _react2.default.createElement(
   _reactRouterDom.Router,
@@ -61749,9 +62098,14 @@ const AppRouter = () => _react2.default.createElement(
       _react2.default.createElement(_reactRouterDom.Route, { path: '/images', component: _Images2.default }),
       _react2.default.createElement(_PublicRoute2.default, { path: '/login', component: _Login2.default }),
       _react2.default.createElement(_PublicRoute2.default, { path: '/register', component: _Register2.default }),
-      _react2.default.createElement(_PrivateRoute2.default, { path: '/dashboard', exact: true, component: _Dashboard2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount', exact: true, component: _MyAccount2.default }),
       _react2.default.createElement(_PrivateRoute2.default, { path: '/mycontent/post', component: _AddNewContent2.default }),
-      _react2.default.createElement(_PrivateRoute2.default, { path: '/mycontent', exact: true, component: _MyContent2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount/downloads/images', exact: true, component: _MyImages2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount/downloads/videos', exact: true, component: _MyVideos2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount/downloads/memes', exact: true, component: _MyMemes2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount/orders/images', exact: true, component: _MyImages2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount/orders/videos', exact: true, component: _MyVideos2.default }),
+      _react2.default.createElement(_PrivateRoute2.default, { path: '/myaccount/orders/memes', exact: true, component: _MyMemes2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { component: _NotFound2.default })
     ),
     _react2.default.createElement(_Footer2.default, null)
@@ -62487,7 +62841,7 @@ class Login extends _react2.default.Component {
         localStorage.setItem('auth', res.data.token);
         localStorage.setItem('acc_type', res.data.acc_type);
         this.props.startLogin(res.data);
-        this.props.history.push('/dashboard');
+        this.props.history.push('/myaccount');
       }).catch(e => {
         this.setState({
           err: 'Login Unsuccessfull'
@@ -62616,10 +62970,10 @@ var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_module
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const NotFound = () => {
+const NotFound = props => {
   return _react2.default.createElement(
     'section',
-    { className: 'normal text-center bg-white' },
+    { className: 'normal text-center bg-white py-5' },
     _react2.default.createElement(
       'div',
       { className: 'col-md-12' },
@@ -62648,8 +63002,10 @@ const NotFound = () => {
           null,
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/' },
-            'Go Home'
+            { to: '#', onClick: () => {
+                props.history.goBack();
+              } },
+            'Go Back'
           )
         )
       )
