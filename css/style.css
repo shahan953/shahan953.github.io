@@ -1,0 +1,224 @@
+
+/************* General CSS *************/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-red:hover{
+    background-color: #1774BB;
+}
+.btn-general{
+    text-transform: uppercase;
+    border-radius: 0;
+    font-size: 16px;
+    transition: all .3s;
+}
+.btn-red{
+    background-color: #DA262E;
+    color: #fff !important;
+}
+.btn-white{
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-white:hover{
+    border-color:#1775BB;
+    background-color: #1775BB;
+    color: #fff;
+}
+.title-box{
+    text-align: center;
+    text-transform: uppercase;
+    color: #1775BB;
+}
+.title-box h2{
+    font-size: 38px;
+}
+span.primary-haeding{
+    color: #7E7E7E;
+    display: block;
+    font-size: 20px;
+}
+/************* Slide area ***************/
+.manu-area .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.single-slide {
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center center;
+    height: 680px;
+}
+.slide-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.slide-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.slide-1 {
+    background-image: url(../img/hero.jpg);
+}
+.slide-2 {
+    background-image: url(../img/hero1.jpg);
+}
+.slide-3 {
+    background-image: url(../img/hero2.jpg);
+}
+.home-slides .owl-nav div {
+  background: transparent none repeat scroll 0 0;
+  color: #222;
+  font-size: 25px;
+  height: 40px;
+  width: 40px;
+  border:1px solid #fff;
+  border-radius: 50%;
+  left: 50px;
+  line-height: 38px;
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  color: #fff;
+}
+.home-slides .owl-nav div:hover {
+    opacity: 1;
+    background: #1774BB;
+    border-color: #1774BB;
+}
+.home-slides .owl-nav div.owl-next {
+	left: auto;
+	right: 50px;
+}
+.big-logo h3{
+    font-size: 75px;
+}
+.slide-title h2{
+    font-size: 40px;
+}
+
+/************ Service area **********/
+.service-img-box{
+    position: relative;
+}
+.service-title, .btn-box{
+    position: absolute;
+}
+.service-title{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 65%;
+    text-align: center;
+}
+.btn-box{
+    bottom: -20px;
+    width: 100%;
+    text-align: center;
+}
+.service-title h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+.service [class*=col-]{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+/************ ABOUT AREA *************/
+.about{
+    padding: 40px 0;
+    background-color: #F7F7F7;
+}
+.about-desc{
+    max-width: 80%;
+    margin: 30px auto 0;
+}
+/********** WHAT WE DO ***********/
+.whatWeDo{
+    padding: 40px 0;
+    background-image: url(../img/bg-whatwedo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.whatWeDo-desc{
+    text-align: center;
+    color: rgb(231, 234, 236);
+    margin-top: 60px;
+}
+.whatWeDo-desc i{
+    display: inline-block;
+    font-size: 60px;
+}
+.whatWeDo-desc h2{
+    font-size: 20px;
+    max-width: 150px;
+    margin: 30px auto 0;
+}
+.whatWeDo .title-box h2,.whatWeDo span.primary-haeding{
+    color: #fff;
+}
+/********* NEWS ***********/
+.news{
+    padding: 40px 0;
+}
+.news-desc{
+    max-width: 80%;
+    margin: 30px auto 0;
+    text-align: center;
+}
+.news-btn{
+    text-align: center;
+    margin-top: 30px;
+}
+/*********** CONTACT **********/
+.contact{
+    padding: 40px 0;
+    background-image: url(../img/bg-contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact .big-logo h3{
+    font-size: 50px;
+    color: #fff;
+}
+ul.address,ul.contact-info{
+    list-style: none;
+    margin: 25px 0 0;
+    padding: 0;
+}
+ul.address p,ul.contact-info p{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.contact-left-btn{
+    margin-top: 25px;
+}
+.w-50 input{
+    width: 48.5%;
+    display: inline-block;
+}
+.input-grou input,.input-grou textarea{
+    padding: 10px;
+    background: rgba(255,255,255,.4);
+    margin-top: 21px;
+    /* border-color: #fff; */
+    border: 1px solid #fff;
+}
+.w-100{
+    width: 100%;
+}
+.mrl{
+    margin-left: 2%;
+}
