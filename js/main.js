@@ -12,3 +12,19 @@ $(document).ready(function(){
         navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
     }); 
 });
+
+// Smooth scrolling
+$(function () {
+
+    $("a.smooth-scroll").click(function (event) {
+
+        event.preventDefault();
+
+        // get/return id like #about, #work, #team and etc
+        var section = $(this).attr("href");
+
+        $('html, body').animate({
+            scrollTop: $(section).offset().top -20
+        }, 1550, "easeInOutExpo");
+    });
+});

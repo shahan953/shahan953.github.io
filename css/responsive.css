@@ -1,0 +1,38 @@
+@media(max-width: 991px){
+    .service-title h2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+@media(max-width: 767px){
+    ul.address, ul.contact-info, .contact-left-btn {
+        margin: 25px 0 0;
+    }
+    .service-title h2 {
+        font-size: 25px;
+    }
+    .service-img-box-res{
+        margin-bottom: 35px;
+    }
+    .slide-title h2 {
+        font-size: 30px;
+    }
+    .big-logo h3 {
+        font-size: 50px;
+    }
+    .navbar-default .navbar-brand {
+        padding-left: 20px;
+    }
+}
+@media(max-width: 390px){
+    .w-50 input {
+        width: 48.2%;
+    }
+    .service-title h2 {
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .slide-1,.slide-2,.slide-3{
+        height: 95vh;
+    }
+}

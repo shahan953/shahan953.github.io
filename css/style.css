@@ -39,6 +39,12 @@ span.primary-haeding{
     font-size: 20px;
 }
 /************* Navbar ***************/
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: none;
+}
+.navbar-default {
+    background-color: #fff;
+}
 .navbar-brand{
     height: auto;
     padding: 0;
@@ -59,9 +65,9 @@ span.primary-haeding{
     text-transform: uppercase;
     transition: all .3s;
 }
-.navbar-default .navbar-nav>li>a:hover{
-    background-color: #1774BB;
-    color: #fff;
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a{
+    background-color: #1774BB !important;
+    color: #fff !important;
 }
 
 /************* Slide area ***************/
@@ -149,6 +155,7 @@ span.primary-haeding{
     text-transform: uppercase;
     font-size: 20px;
     color: #fff;
+    font-weight: 400;
 }
 .service [class*=col-]{
     padding-left: 5px;
@@ -168,10 +175,10 @@ span.primary-haeding{
 /********** WHAT WE DO ***********/
 .whatWeDo{
     padding: 40px 0;    
-}
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
+    /*background-image: url(../img/bg-whatwedo_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
 }
 .whatWeDo-desc{
     text-align: center;
@@ -186,6 +193,8 @@ span.primary-haeding{
     font-size: 20px;
     max-width: 150px;
     margin: 30px auto 0;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 .whatWeDo .title-box h2,.whatWeDo span.primary-haeding{
     color: #fff;
@@ -205,10 +214,12 @@ span.primary-haeding{
 }
 /*********** CONTACT **********/
 .contact{
-    padding: 40px 0;
-    /*background-image: url(../img/bg-contact.jpg);
+    padding: 105px 0;
+    /*background-image: url(../img/bg-contact_1.jpg);
     background-size: cover;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    
 }
 .contact .big-logo{
     margin-top: 21px;
@@ -250,4 +261,8 @@ ul.address p,ul.contact-info p{
 }
 ul.address,ul.contact-info,.contact-left-btn{
     margin: 45px 0 0;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
