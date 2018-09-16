@@ -1,7 +1,7 @@
 
 /************* General CSS *************/
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .btn-red:hover{
     background-color: #1774BB;
@@ -38,11 +38,34 @@ span.primary-haeding{
     display: block;
     font-size: 20px;
 }
-/************* Slide area ***************/
+/************* Navbar ***************/
+.navbar-brand{
+    height: auto;
+    padding: 0;
+    padding: 5px 0;
+}
 .manu-area .navbar {
     border-radius: 0;
     margin-bottom: 0;
+    border:0px;
 }
+.navbar-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #535353;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    background-color: #1774BB;
+    color: #fff;
+}
+
+/************* Slide area ***************/
+
 .single-slide {
     background-color: #ddd;
     background-size: cover;
@@ -144,11 +167,11 @@ span.primary-haeding{
 }
 /********** WHAT WE DO ***********/
 .whatWeDo{
-    padding: 40px 0;
-    background-image: url(../img/bg-whatwedo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    padding: 40px 0;    
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
 .whatWeDo-desc{
     text-align: center;
@@ -183,17 +206,15 @@ span.primary-haeding{
 /*********** CONTACT **********/
 .contact{
     padding: 40px 0;
-    background-image: url(../img/bg-contact.jpg);
+    /*background-image: url(../img/bg-contact.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
-.contact .big-logo h3{
-    font-size: 50px;
-    color: #fff;
+.contact .big-logo{
+    margin-top: 21px;
 }
 ul.address,ul.contact-info{
     list-style: none;
-    margin: 25px 0 0;
     padding: 0;
 }
 ul.address p,ul.contact-info p{
@@ -221,4 +242,12 @@ ul.address p,ul.contact-info p{
 }
 .mrl{
     margin-left: 2%;
+}
+.input-grou button{
+    margin-top: 21px;
+    padding: 10px 16px;
+    border:none;
+}
+ul.address,ul.contact-info,.contact-left-btn{
+    margin: 45px 0 0;
 }

@@ -1,3 +1,4 @@
+// Owl Carousel
 $(document).ready(function(){
     $(".home-slides").owlCarousel({
         items: 1,
