@@ -1,0 +1,236 @@
+@font-face{
+    font-family: myFont;
+    src: url('webfont/duvshanitboldwebfont.woff');
+}
+body{
+    font-family: myFont;
+}
+a:focus{outline: none}
+.c-dark{
+    color: #4c515b;
+}
+.c-white{
+    color: #fff;
+}
+.btn{
+    border-radius: 20px;
+    transition: all .2s;
+}
+.btn-dark{
+    background-color: #4c515b;
+    color: #fff;
+    border-color: #4c515b;
+}
+.btn-white{
+    border:5px solid #4c515b;
+    color: #4c515b;
+    
+}
+.btn-white:hover{
+    background-color: #4c515b;
+    color: #fff;
+}
+.div-title{
+    width: 100%;
+    height: auto;
+}
+.heading-overline{
+    margin: auto;
+    width: 20%;
+    height: 10px;
+    background-color: #74c044;
+}
+.mt-65{margin-top: 65px;}
+/**********************************************************
+                            Nabbar                                    
+**********************************************************/
+.navbar-brand img{
+    width: 17%;
+    padding-right: 20px;
+}
+.navbar-color .navbar-brand {
+    color: #4c515b;
+    font-size: 23px;
+}
+.giver-top-nav{
+    background-image: linear-gradient(to right ,#EBE84B, #74C044);
+}
+.navbar-color .navbar-nav .nav-link {
+    color: #4c515b;
+    font-size: 23px;
+}
+.navbar-color .navbar-toggler {
+    color: #4c515b;
+}
+.navbar-color .navbar-toggler{
+    border-color: #4c515b;
+}
+.active,
+.nav-item:hover{
+    color: #4c515b;
+    border-bottom: 5px solid #4c515b;
+}
+.navbar-light .navbar-nav .active>.nav-link{color: #4c515b;}
+.nav-item{margin: 0 10px;}
+.nav-item:first-child{margin-left: 0;}
+.nav-item:last-child{margin-right: 0;}
+/**********************************************************
+                            Home                                    
+**********************************************************/
+#slider img{
+    width: 100%
+}
+#slider{
+    position: relative;
+}
+.hero-content{
+    width: 55%;
+    position: absolute;
+    right:0;
+    bottom: 45%;
+    transform: translateY(50%);
+}
+.hero-heading{
+    width: 60%;
+}
+/**********************************************************
+                            Services                                    
+**********************************************************/
+.title-desc{
+    position: relative;
+}
+.service-img{
+    float: left;
+    width: 23%;
+}
+.service-decs{
+    display: table;
+    height: 100%;
+}
+.service-desc-inner{
+    display: table-cell;
+    vertical-align: middle;
+}
+.m-ms-20{
+    margin-top: 30px;
+}
+.row.no-gutters [class*=col-], .no-pm{
+    padding-left: 0;
+    padding-right: 0;
+}
+/**********************************************************
+                            Video                                    
+**********************************************************/
+.video-inner{
+    width: 63%;
+    background-color: #e7e9e8;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    position: relative;
+}
+.video-inner i{
+    color: #80c342;
+    font-size: 60px;
+}
+.video-inner a{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.video-popup {
+    width: 85%;
+    height: 75vh;
+    margin: auto;
+}
+a{text-decoration: none;}
+/**********************************************************
+                            About                                    
+**********************************************************/
+#about{
+    padding-top: 250px;
+}
+.about-header{
+    display: table;
+    height: 100%;
+}
+.about-header-inner{
+    display: table-cell;
+    vertical-align: middle;
+}
+.about-img-wrapper{
+    background-image: linear-gradient(to left ,#ebe94c, #74c044);
+    position: relative;
+    width: 100%;
+    height: 540px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.about-img{
+    position: absolute;
+    bottom: 0;
+    left: 14%;
+    width: 72%;
+}
+/**********************************************************
+                            Giver-brand                                    
+**********************************************************/
+#giver{
+    margin: 100px 0;
+    overflow: hidden;
+}
+.giver-img{
+    width: 12%;
+    float: left;
+    margin-left: 7%;
+}
+.bc-giver{
+    background-image: linear-gradient(to left ,#ebe94c, #74c044);
+    height: 99%;
+    width: 70%;
+    float: right;
+}
+#giver p{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15%;
+}
+/**********************************************************
+                            Contact                                    
+**********************************************************/
+.wOwn{
+    width: 45%;
+}
+.wOwn-1{
+    margin-right: 9%;
+}
+.fc{
+    border-bottom: 3px solid #4c515b;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+.fc:focus{
+    border-bottom: 3px solid #4c515b;
+    box-shadow: 0 0 0 0;
+}
+.from-wrapper{
+    width: 90%;
+    float: right;
+}
+.contact-wrapper{
+    position: relative;
+}
+.btn-color{
+    color: #4c515b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#footer{
+    height: 35px;
+    width: 100%;
+    background-color: #4c515b;
+}

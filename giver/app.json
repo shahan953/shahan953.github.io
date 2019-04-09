@@ -1,0 +1,18 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ],
+  "description": "A monitory gift platform",
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "giver-webcontent",
+  "scripts": {
+    "postdeploy": "parcel index.html"
+  },
+  "stack": "container"
+}
