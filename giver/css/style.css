@@ -1,9 +1,25 @@
-@font-face{
-    font-family: myFont;
-    src: url('webfont/duvshanitboldwebfont.woff');
+
+@font-face {
+font-family: 'DuvshanBold';
+src: url("webfont/duvshanitboldwebfont.eot");
+src: 
+    url("webfont/duvshanitboldwebfont.woff") format("woff"),
+    url("webfont/duvshanitboldwebfont.ttf") format("ttf"),
+    url("webfont/duvshanitboldwebfont.svg") format("svg");
 }
+
+@font-face {
+font-family: 'DuvshanRegular';
+src: url("webfont/duvshanitregularwebfont.eot");
+src: 
+    url("webfont/duvshanitregularwebfont.woff") format("woff"),
+    url("webfont/duvshanitregularwebfont.ttf") format("ttf"),
+    url("webfont/duvshanitregularwebfont.svg") format("svg");
+}
+
+
 body{
-    font-family: myFont;
+    font-family: 'DuvshanBold', sans-serif;
 }
 a:focus{outline: none}
 .c-dark{
@@ -44,6 +60,10 @@ a:focus{outline: none}
 /**********************************************************
                             Nabbar                                    
 **********************************************************/
+.navbar-brand{
+    font-family: 'DuvshanRegular', sans-serif
+}
+
 .navbar-brand img{
     width: 17%;
     padding-right: 20px;
