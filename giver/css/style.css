@@ -1,25 +1,27 @@
 
 @font-face {
 font-family: 'DuvshanBold';
-src: url("webfont/duvshanitboldwebfont.eot");
+src: url("../webfont/duvshanitboldwebfont.eot");
 src: 
-    url("webfont/duvshanitboldwebfont.woff") format("woff"),
-    url("webfont/duvshanitboldwebfont.ttf") format("ttf"),
-    url("webfont/duvshanitboldwebfont.svg") format("svg");
+    url("../webfont/duvshanitboldwebfont.eot") format('embedded-opentype'),
+    url("../webfont/duvshanitboldwebfont.woff") format("woff"),
+    url("../webfont/duvshanitboldwebfont.ttf") format("ttf"),
+    url("../webfont/duvshanitboldwebfont.svg") format("svg");
 }
 
 @font-face {
 font-family: 'DuvshanRegular';
-src: url("webfont/duvshanitregularwebfont.eot");
+src: url("../webfont/duvshanitregularwebfont.eot");
 src: 
-    url("webfont/duvshanitregularwebfont.woff") format("woff"),
-    url("webfont/duvshanitregularwebfont.ttf") format("ttf"),
-    url("webfont/duvshanitregularwebfont.svg") format("svg");
+    url("../webfont/duvshanitregularwebfont.eot") format('embedded-opentype'),
+    url("../webfont/duvshanitregularwebfont.woff") format("woff"),
+    url("../webfont/duvshanitregularwebfont.ttf") format("truetype"),
+    url("../webfont/duvshanitregularwebfont.svg") format("svg");
 }
 
 
 body{
-    font-family: 'DuvshanBold', sans-serif;
+    font-family: 'DuvshanRegular', sans-serif;
 }
 a:focus{outline: none}
 .c-dark{
