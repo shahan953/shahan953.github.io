@@ -1,0 +1,364 @@
+                /*General CSS*/ 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.d-block{
+    display: block;
+}
+p {
+    font-size: 13px;
+    color: rgba(0,0,0,.5);
+}
+.div-title h3{
+    font-size: 35px;
+    font-weight: 300;
+    margin: 0;
+    text-transform: capitalize;
+}
+.mt-30{
+    margin: 30px 0 0 0;
+}
+.no-m{
+    margin: 0 !important;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.row{
+    margin-bottom: 0;
+}
+h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+                /* BUTTON */
+
+
+.btn-trans{
+    background-color: transparent;
+    color: #00BCFC;
+    box-shadow: unset;
+}
+.btn-trans:hover{
+    color: #000;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.btn-own{
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    transition: all .3s;
+    padding: 5px 50px;
+    height: auto;
+    border: 1px solid #fff;
+}
+.color1{
+    background-color: #00c9ff;
+    border: none;
+}
+.color1:hover{
+    background-color: #006BA7;
+}
+
+                /* HOME CSS */
+
+#home{
+    padding: 50px 0;
+    background-image: url('../img/bg-home.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-title{
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.home-title-inner{
+    font-size: 25px;
+    font-weight: 300;
+}
+.home-title-desc{
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #fff;
+}
+.slide-img{
+    margin-top: 25px;
+}
+#home .owl-dots{
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+}
+#home .owl-dot span{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #fff;
+}
+#home .owl-dot.active span{
+    background-color: #00c9ff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+}
+
+
+                /* FEATURE CSS*/
+.feature-desc {
+    margin: 40px 0;
+    padding: 15px;
+} 
+#feature .row .col{
+    padding: 0;
+}
+.feature-icon{
+    line-height: 95px;
+    width: 95px;
+    height: 95px;
+    border: 2px solid #00c9ff;
+    border-radius: 50%;
+    font-size: 45px;
+    color: #00c9ff;
+    margin: auto;
+    transition: all .3s;
+}
+.feature-desc p{
+    font-size: 13px;
+}
+.feature-desc:hover .feature-icon{
+    background-color: #00c9ff;
+    color: #fff;
+    transform: translateY(-5px);
+}
+.feature-desc:hover h4{
+    color: #00c9ff;
+}
+
+/*************************************************
+                    START                           
+*************************************************/
+#start{
+    background-color: #eef4f7;
+    padding: 100px 0;
+}
+.start-img{
+    margin-left: 20px;
+}
+/*************************************************
+                    TESTIMONIAL                           
+*************************************************/
+#testimonial{
+    background-image: radial-gradient(#a2f0de, #150516);
+    background-position: -50% -50%;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+}
+#testimonial p{
+    color: #fff;
+}
+.client-name{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+.client-desig{
+    font-size: 17px;
+    margin: 10px 0 0 0 ;
+}
+.test-comm{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    position: relative;
+}
+.test-comm p{
+    margin: 27px;
+}
+.responsiv-img{
+    width: 65%;
+    height: auto;
+}
+.test-comm::after{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: -19px;
+    top: 20%;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(135deg);
+}
+#testimonial .owl-item{
+    height: auto;
+}
+#testimonial .owl-carousel .owl-item img {
+    display: block;
+    width: 65%;
+    margin: auto;
+}
+#testimonial .owl-dots{
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+}
+#testimonial h3{
+    margin-bottom: 35px;
+}
+#testimonial .owl-dot span{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #fff;
+}
+#testimonial .owl-theme .owl-dots .owl-dot span{
+    background-color: transparent;
+}
+#testimonial .owl-dot.active span{
+    background-color: #00c9ff !important;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+}
+                /* NAVVAR */
+.light-blue.lighten-1{
+    background-color: #00c9ff !important;
+}
+nav ul a:hover{
+    background-color: #006BA7;
+}
+.sidenav li > a:hover{
+    background-color: #006BA7;
+}
+.sidenav-overlay {
+    z-index: 996;
+}
+
+            /*CONTACT CSS*/
+#contact{
+  background-color: #2F383D;
+  border-bottom: 1px solid #3C454A;
+}
+.contact-icon{
+  padding: 25px 0;
+  font-size: 20px;
+  color: #8B9093;
+}
+.contact-icon a{
+    color: #00c9ff;
+    transition: all .3s;
+}
+.contact-icon a:hover{
+  color: #fff;
+}
+
+            /* Why Choose section */
+
+#why-choose{
+  background-color: #EFF4F7;
+  padding: 100px 0;
+}
+.left-side img{
+  width: 80%;
+}
+.why-choose-para{
+  text-align: center;
+  max-width: 55%;
+  margin: 0 auto;
+  
+}
+.faq,.left-side{
+  margin-top: 65px;
+}
+.collapsible-header{
+  margin-bottom: 10px;
+}
+.faq-icon{
+    color: #00c9ff;
+}
+.collapsible-body{
+    padding: 0 10px 10px 10px;
+}
+            /* INFO CSS */
+
+#info{
+  background-color: #2F383D;
+  padding: 100px 0;
+}
+#info h4{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,.7);
+}
+#info p{
+    color: rgba(255,255,255,.5);
+}
+.post-date{
+    margin: 5px 0 0 0;
+}
+.post-img{
+    float: left;
+    width: 35%;
+    height: auto;
+    padding-right: 15px;
+    padding-top: 4px;
+}
+.post:hover .post-desc{
+    color: #fff !important;
+}
+.post{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#info .btn{
+    padding: 5px 20px;
+    margin: 0 10px 10px 0;
+
+}
+
+                /* FOOTER CSS */
+  #footer{
+    background-color: #1F2227;
+    color: #6E797F;
+  }
+  .copy{
+    padding: 25px 0;
+  }
+  .footer-menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .footer-menu li {
+    float: left;
+    margin: 0;
+  }
+  
+  .footer-menu li a:hover{
+    color:#8B9CA5;
+  }
+  
+  .footer-menu li a {
+    display: block;
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+  }
+  a{
+    color: #6E797F;
+  }
+  .footer-menu ul{
+      text-align: right;
+  }

@@ -1,0 +1,161 @@
+@media (max-width: 600px){
+    #home{
+        padding: 50px 0;
+    }
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+    .home-title {
+        margin: 0;
+    }
+    .home-title-inner{
+        font-size: 20px;
+    }
+    .home-title-desc{
+        line-height: 28px;
+        font-size: 17px;
+    }
+    .home-title {
+        font-size: 35px;
+    }
+    .owl-itm{
+        padding-bottom: 15px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .slide-img{
+        margin-top: 0 !important;
+    }
+
+
+
+
+    #home .owl-dots{
+        display: none;
+    }
+    .feature-desc {
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+    .start-img{
+        margin: 30px 0 0 0;;
+    }
+    .btn-own{
+        padding: 5px 25px;
+    }
+    .test-comm p {
+        margin: 5px;
+    }
+    #testimonial .owl-carousel .owl-item img {
+        width: 30%;
+    }
+    .test-comm::after {
+        content: none;
+    }
+    .client-desig {
+        margin: 5px 0 13px 0;
+    }
+    .client-name{
+        margin: 15px 0 0 0;
+    }
+    .why-choose-para {
+        max-width: 80%;
+    }
+    .left-side img {
+        width: 100%;
+    }
+    .faq, .left-side {
+        margin-top: 20px;
+    }
+    .rmt20{
+        margin-top: 20px !important;
+    }
+    .footer-menu li a {
+        padding: 10px 10px;
+    }
+    .copy {
+        padding: 10px 0;
+    }
+    .fs {
+        padding: 10px 10px 10px 0px !important;
+    }
+    #feature{
+        margin-bottom: 20px;
+    }
+}
+
+/*Medium Devices*/
+@media (min-width:601px) and (max-width: 992px){
+    
+
+
+    .feature-desc {
+        margin: 40px 0 0 0;
+    }
+    #feature{
+        margin-bottom: 40px;
+    }
+    .left-side img {
+        width: 100%;
+    }
+    .start-img {
+        margin: 30px 0 0 0;
+    }
+    .test-comm p {
+        margin: 20px;
+    }
+    #testimonial .owl-carousel .owl-item img {
+        width: 20%;
+    }
+    .test-comm::after {
+        content: none;
+    }
+    .client-desig {
+        margin: 5px 0 13px 0;
+    }
+    .client-name{
+        margin: 15px 0 0 0;
+    }
+    .rmt20 {
+        margin-top: 20px !important;
+    }
+    .footer-menu li a {
+        padding: 10px 10px;
+    }
+    .copy {
+        padding: 10px 0;
+    }
+    .fs {
+        padding: 10px 10px 10px 0px !important;
+    }
+}
+
+/*Large Devices*/
+@media (min-width:993px) and (max-width: 1200px){
+    .feature-desc {
+        margin: 40px 0 0 0;
+    }
+    #feature{
+        margin-bottom: 40px;
+    }
+    .start-img {
+        margin-top: 110px;
+    }
+    .btn-own{
+        padding: 5px 30px;
+    }
+    #info .btn {
+        padding: 5px 12px;
+        margin: 0 5px 5px 0;
+    }
+    .footer-menu li a {
+        padding: 25px 11px;
+    }
+}
+@media (min-width:1201px){
+    .footer-menu li a {
+        padding: 25px 18px;
+    }
+}
