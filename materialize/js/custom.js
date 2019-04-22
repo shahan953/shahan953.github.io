@@ -3,10 +3,8 @@ $('.owl-carousel').owlCarousel({
     margin:50,
     autoplay: false,
     smartSpeed: 700,
-    loop: true,
+    loop: false,
     smartSpeed:450,
-    loop:true,
-    
 });
 
 //Animation
