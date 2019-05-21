@@ -6,6 +6,9 @@
 }
 /*Large Devices*/
 @media (min-width: 992px) and (max-width: 1199px){
+    .hero-desc {
+        font-size: 45px;
+    }
     .about-img-wrapper{height: 450px;}
     .giver-img {width: 22%;}
     .bc-giver{width: 62%;}
@@ -17,6 +20,9 @@
 
 /*Medium Devices*/
 @media (min-width: 768px) and (max-width: 991px){
+    .hero-desc {
+        font-size: 35px;
+    }
     .about-img-wrapper{height: 330px;}
     .giver-img {width: 27%;}
     .bc-giver{width: 57%;}
@@ -29,6 +35,22 @@
 
 /*Small Devices*/
 @media (min-width: 576px) and (max-width: 767px){
+    .wOwn {
+        width: 44%;
+    }
+    .title-desc h3 {
+        font-size: 45px;
+    }
+    .service-desc-inner h3 {
+        font-size: 25px;
+    }
+    .about-header-inner h3 {
+        font-size: 19px;
+    }
+    .btn{margin-top: .5rem !important;}
+    .hero-desc {
+        font-size: 25px;
+    }
     h2 {
         font-size: 1.5rem;
     }
@@ -60,6 +82,27 @@
 /*Extra Small Devices*/
 @media (max-width: 575px){
     /* #home{background-color: black;} */
+    #about {
+        padding-top: 100px;
+    }
+    .btn-lg {
+        padding: 0.1rem .8rem;
+    }
+    .about-header-inner h3 {
+        font-size: 25px;
+    }
+    .service-desc-inner h3 {
+        font-size: 20px;
+    }
+    label {
+        font-size: 25px;
+    }
+    .title-desc h3 {
+        font-size: 35px;
+    }
+    .heading-overline {
+        width: 20%;
+    }
     .btn-dark{
         margin: 0 !important;
     }
@@ -76,13 +119,10 @@
     h3 {
         font-size: 1rem;
     }
-    
-    #about {
-        padding-top: 160px;
-    }
     #giver p {
-        font-size: 11px;
+        font-size: 15px;
         margin-bottom: .5rem;
+        padding: 0;
     }
     .btn-sz i{
         font-size: 30px;

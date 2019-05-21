@@ -1,0 +1,119 @@
+.seconde{
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+.components-service{
+    margin-bottom: 40px;
+}
+
+.service-component-01{
+    width: 100%;
+    border: 2px solid #4c515b;
+}
+.play-button img {
+    width: 26%;
+    margin-top: 24px;
+    background-image: linear;
+}
+.component-header{
+    margin: auto;
+    height: 77px;
+}
+.component-header-1{
+    background-color: #58595b;
+    color: #ffffff;
+    border-radius: 13px;
+    margin-top: 20px;
+    width: 48%;
+    height: 40px;
+    float: left;
+}
+.component-header-1 h5{
+    padding: 6px;
+}
+.component-header-2{
+    float: right;
+    width: 50%;
+    margin-top: 27px;
+    height: 40px;
+    color: #4c515b;
+}
+.component-header-3{
+   color: #4c515b;
+}
+.circle{
+    width: 100px;
+    margin: auto;
+    background-color: #49b5bd;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.service-component-01:hover{
+    border: 2px solid #80c342;
+}
+
+
+/*Scroll*/
+
+#scrl-section{
+    margin-bottom: 115px;
+}
+
+.margn{
+    border-bottom: 3px solid #58595b;
+    padding: 40px 0;
+    margin-right: 40px;
+}
+
+.bc{
+    border: none !important;
+    background-image:linear-gradient(to right, #74c044 ,#b7d436);
+}
+
+.btn-whte{
+    background-color: #fff;
+    border: 2px solid #4c515b;
+    border-radius: 20px;
+    padding: 8px 59px;
+    margin-right: 40px;
+}
+
+.btc{
+    margin-bottom: 70px;
+}
+
+.margn h3{
+    font-size: 30px;
+    margin: 12px 0 0 0;
+}
+
+.icon-section-header{
+    margin-top: 65px;
+}
+.icon-section-header h3{
+    font-size: 90px;
+    
+}
+
+.icon-bottom{
+    margin-bottom: 115px
+}
+.font-png img{
+    width: 23%;
+
+}
+
+.font-png-title{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.abc{
+    font-size: 34px;
+}
+.shekel{
+    font-size: 17px;
+}
